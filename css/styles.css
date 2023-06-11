@@ -118,6 +118,21 @@ ul {
     color: #404BBF;
 }
 
+.current {
+    position: relative;
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+}
+
 .header-address-link {
     font-family: 'Roboto';
     font-style: normal;
@@ -167,6 +182,8 @@ ul {
         letter-spacing: 0.02em;
         color: #FFFFFF;
         max-width: 496px;
+        width: 100%;
+        height: 100%;
         margin: auto;
         margin-bottom: 48px;
         }
@@ -197,6 +214,7 @@ ul {
 .hero-btn:focus {
     background-color: #404BBF;
     color: #FFFFFF;
+    transition: 250ms;
 }
 
 /**----------------------bussiness solutions-personal------------------------*/
@@ -498,6 +516,69 @@ display: flex;
   background-color: #31D0AA;
   transition: 250ms;
 }
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms, visibility 250ms;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms;
+    width: 408px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-btn {
+    position: absolute;
+    display: block;
+    top: 24px;
+    right: 24px;
+   width: 24px;
+   height: 24px;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   background-color: #E7E9FC;
+   border-radius: 50%;
+   cursor: pointer;
+    transition: 250ms;
+}
+
+.modal-btn:hover {
+    background-color: #404BBF;
+    color: #fff;
+  }
+
+.modal-close {
+fill: currentColor;
+align-items: center;
+justify-content: center;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+transform: translate(-50%, -50%) scale(0);
+}
+
+
 /*------------------portfolio.html---------------*/
 
 
@@ -608,7 +689,11 @@ display: flex;
                 .hero-button-all:focus {
                     background-color: #404BBF;
                     color: #FFFFFF;
-                    border: 1px solid transparent
+                    border: 1px solid transparent;
+                    transition: 250ms;
+                    box-shadow: 0px, 2px rgba(0, 0, 0, 0.12), 
+                        0px, 2px rgba(0, 0, 0, 0.08),
+                        0px, 3px rgba(0, 0, 0, 0.1);
                 }
         
                
