@@ -102,6 +102,7 @@ ul {
     gap: 40px;
     }
 .header-menu-link {
+    color: #404BBF;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -118,8 +119,8 @@ ul {
     line-height: 1.5;
     text-decoration: none;
     letter-spacing: 0.02em;
-    /*color: #2E2F42;*/
-    color: #404BBF;
+    color: #2E2F42;
+    
     padding-top: 24px;
         padding-bottom: 24px;
 }
@@ -142,6 +143,7 @@ ul {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
+    
 }
 
 .header-address-link {
@@ -375,7 +377,7 @@ cursor: pointer;
 .personal-list {
     display: flex;
     gap: 24px;
-    justify-content: center;
+    /*justify-content: center;*/
     }
 
 .personal-soc-list {
@@ -383,10 +385,16 @@ cursor: pointer;
     width: 40px;
     height: 40px;
     gap: 24px;
-    /*justify-content: center;*/
+    justify-items: center;
+    padding-left: 16px;
+    
     }
 
+   .personal-soc-item {
    
+    transition: background-color 250ms
+     cubic-bezier(0.4, 0, 0.2, 1);
+}
     
 .personal-soc-link {
 padding: 12px;
@@ -397,20 +405,15 @@ border-radius: 50%;
 width: 100%;
 height: 100%;
 display: flex;
+
 align-items: center;
 justify-content: center;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.personal-soc-item {
-    transition: background-color 250ms
-     cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .personal-soc-link:hover,
 .personal-soc-link:focus {
 background-color: #404BBF;
-
 }
     
 .personal-item {
@@ -565,7 +568,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #31D0AA;
-  transition: 250ms;
+  
 }
 
 .footer-soc-icon{
