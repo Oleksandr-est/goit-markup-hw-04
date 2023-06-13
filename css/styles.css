@@ -131,7 +131,7 @@ ul {
 }
 
 .current {
-    color: #404bbf;
+   
     position: relative;
 }
 
@@ -144,8 +144,15 @@ ul {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-    
+    }
+ 
+    /*.current.header-menu-link {
+    color: #404bbf;
+} */
+.header-menu-link.current {
+    color: #404bbf;
 }
+
 
 .header-address-link {
     font-family: 'Roboto';
